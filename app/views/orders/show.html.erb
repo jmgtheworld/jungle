@@ -23,7 +23,8 @@
         <%= puts "inside table" %>
         <% @order.line_items.each do |line_item| %>
           <%= render 'line_item', image: line_item.product.image, name: line_item.product[:name], 
-          description: line_item.product[:description], quantity: line_item[:quantity].to_i, total_price: line_item[:total_price_cents].to_i %>
+          description: line_item.product[:description], 
+          quantity: line_item[:quantity].to_i, total_price: line_item[:total_price_cents].to_i %>
         <% end %>
       </tbody>
       <tfoot>
