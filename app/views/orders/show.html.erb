@@ -8,6 +8,41 @@
     <h4>Thank you for your order!</h4>
   </div>
 
+  <div class="panel panel-default items">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Image</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Quantity</th>
+          <th>Total Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= puts "inside table" %>
+        <% @order.line_items.each do |line_item| %>
+          <%= render 'line_item', image: line_item.product.image, name: line_item.product[:name], 
+          description: line_item.product[:description], 
+          quantity: line_item[:quantity].to_i, total_price: line_item[:total_price_cents].to_i %>
+        <% end %>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th colspan="5">
+            Final Amount for Order: $<%= @order.total_cents/100.0  %> 
+          </th>
+        </tr>
+        <tr>
+          <th colspan="5">
+            <p> Email used for Order: <%= @order.email %> </p>
+          </th>
+        </tr>
+      </tfoot>
+    </table>
+</div>
+
+
   <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
 
 </section>
