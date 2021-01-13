@@ -25,3 +25,9 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 * Rails 4.2 [Rails Guide](http://guides.rubyonrails.org/v4.2/)
 * PostgreSQL 9.x
 * Stripe
+
+## Screenshots
+!["Screenshot of home page, displaying list of products"](https://github.com/jmgtheworld/jungle/blob/master/docs/list_of_products.png?raw=true)
+!["Screenshot of displaying specific product"](https://github.com/jmgtheworld/jungle/blob/master/docs/product.png?raw=true)
+!["Screenshot of Admin dashboard, displaying total product/category count"](https://github.com/jmgtheworld/jungle/blob/master/docs/admin_dashboard.png?raw=true)
+!["Screenshot of Admin category section, where admin can add new category"](https://github.com/jmgtheworld/jungle/blob/master/docs/admin_category.png?raw=true)
